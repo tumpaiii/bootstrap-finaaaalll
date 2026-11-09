@@ -1,0 +1,36 @@
+{
+  "name": "grit-bootstrapped-founders-meetup",
+  "version": "1.0.6",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node -e \"const fs=require('fs'),{spawnSync}=require('child_process');if(!fs.existsSync('.next/BUILD_ID')){spawnSync('next',['build','--webpack'],{stdio:'inherit',shell:true})};const r=spawnSync('next',['start','-H','0.0.0.0','-p','3000'],{stdio:'inherit',shell:true});process.exit(r.status||0)\"",
+    "build": "next build --webpack",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "dev:local": "next dev --webpack -H 0.0.0.0 -p 3000"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "framer-motion": "14.10.1",
+    "lucide-react": "1.31.0",
+    "clsx": "2.1.1",
+    "tailwind-merge": "3.6.0",
+    "class-variance-authority": "0.7.1",
+    "@radix-ui/react-slot": "^1.2.4"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "tailwindcss": "4.2.1",
+    "@tailwindcss/postcss": "4.2.1",
+    "postcss": "^8.5.6"
+  }
+}
